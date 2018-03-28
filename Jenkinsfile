@@ -6,11 +6,9 @@ pipeline {
         echo 'hello'
       }
     }
-  stages {
-    stage('Test') {
-       steps {
-         sh '/home/ubuntu/pipeline1.sh'
-       }
+    stage('test') {
+      steps {
+        echo 'test print'
+      }
     }
-  }
 }
