@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        PATH = "/home/ubuntu:/home/local/go/bin:$PATH"
+        PATH = "/home/ubuntu:/home/local/go/bin:/home/ubuntu/work:$PATH"
     }
     stages {
         stage('Build') { 
