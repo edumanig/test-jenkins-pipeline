@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        PATH = "/home/ubuntu:$PATH"
+        PATH = "/home/ubuntu:/home/local/go/bin:$PATH"
     }
     stages {
         stage('Build') { 
@@ -17,7 +17,7 @@ pipeline {
         stage('Test2') { 
             steps {
               echo "PATH is: $PATH"
-              sh "/home/ubuntu/pipeline1.sh"
+              sh "pipeline1.sh"
             }
         }
         stage('Deploy') { 
