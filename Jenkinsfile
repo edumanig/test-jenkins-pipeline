@@ -16,7 +16,6 @@ pipeline {
         }
         stage('Test2') { 
             steps {
-              version = readMavenPom.getVersion()
               echo "PATH is: $PATH"
             }
         }
