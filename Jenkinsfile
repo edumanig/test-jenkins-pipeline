@@ -6,17 +6,13 @@ pipeline {
         echo 'hello'
       }
     }
-    stages {
-        stage('Test') {
-            steps {
-                #sh './gradlew check'
+  stages {
+    stage('Test') {
+       steps {
+         cd /home/ubuntu
+         sh "jenkins_terraform_install.sh"
+         sh ""/usr/local/go/bin/go version"
 
-                cd /home/ubuntu
-                sh "jenkins_terraform_install.sh"
-
-                # show go version
-                /usr/local/go/bin/go version
-            }
         }
     }
   }
