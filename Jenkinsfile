@@ -9,11 +9,8 @@ pipeline {
   stages {
     stage('Test') {
        steps {
-         cd /home/ubuntu
-         sh "jenkins_terraform_install.sh"
-         sh "/usr/local/go/bin/go version"
-
-        }
+         sh '/home/ubuntu/pipeline1.sh'
+       }
     }
   }
 }
