@@ -18,7 +18,6 @@ pipeline {
             steps {
               version = readMavenPom.getVersion()
               echo "PATH is: $PATH"
-              #sh "pipeline1.sh"
             }
         }
         stage('Deploy') { 
