@@ -6,9 +6,4 @@ pipeline {
         echo 'hello'
       }
     }
-    stage('test') {
-      steps {
-        echo 'test print'
-      }
-    }
 }
