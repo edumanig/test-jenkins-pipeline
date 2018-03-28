@@ -11,7 +11,7 @@ pipeline {
        steps {
          cd /home/ubuntu
          sh "jenkins_terraform_install.sh"
-         sh ""/usr/local/go/bin/go version"
+         sh "/usr/local/go/bin/go version"
 
         }
     }
