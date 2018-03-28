@@ -17,7 +17,7 @@ pipeline {
         stage('Test2') { 
             steps {
               echo "PATH is: $PATH"
-              sh '/home/ubuntu/pipeline1.sh'
+              sh "/home/ubuntu/pipeline1.sh"
             }
         }
         stage('Deploy') { 
