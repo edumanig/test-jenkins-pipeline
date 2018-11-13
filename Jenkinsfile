@@ -8,14 +8,14 @@ pipeline {
             echo 'build hello'
           }
         }
-        stage('') {
+        stage('upgrade_only') {
           steps {
             build(job: 'upgrade_only', propagate: true, quietPeriod: 2, wait: true)
           }
         }
         stage('test email') {
           steps {
-            emailext(subject: '$BUILD_TAG', body: '$BUILD_DISPLAY_NAME', to: 'edsel@aviatrix.com')
+            emailext(subject: '$BUILD_TAG - edsel', body: '$BUILD_DISPLAY_NAME - what number', to: 'edsel@aviatrix.com')
           }
         }
       }
