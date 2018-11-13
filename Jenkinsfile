@@ -16,6 +16,7 @@ pipeline {
         stage('test email') {
           steps {
             emailext(subject: '$BUILD_TAG - edsel', body: '$BUILD_DISPLAY_NAME - what number', to: 'edsel@aviatrix.com')
+            echo 'println GLOBAL_VAR println env.GLOBAL_VAR'
           }
         }
       }
